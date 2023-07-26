@@ -18,13 +18,19 @@ export default function HomePage() {
     <div>
       <table>
         <tr>
-          <th>Coin</th>
+          <th>Name</th>
           <th>Price</th>
+          <th>24 Hour % Change</th>
+          <th>24 Hour Volume</th>
+          <th>Supply</th>
         </tr>
         {example.map((data) => (
           <tr key={data.id}>
             <td>{data.name}&nbsp;{data.symbol}</td>
-            <td>{data.priceUsd}</td>
+            <td>${parseFloat(data.priceUsd).toFixed(2)}</td>
+            <td>{parseFloat(data.changePercent24Hr).toFixed(2)}</td>
+            <td>{parseFloat(data.volumeUsd24Hr).toFixed()}</td>
+            <td>{parseFloat(data.supply).toFixed()}</td>
           </tr>
         ))}
       </table>

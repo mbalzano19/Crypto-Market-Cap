@@ -8,6 +8,8 @@ export default function NavBar() {
     return(
         <nav>
             <Link to='/home'>Home</Link>
+            &nbsp;&nbsp;
+            <Link to='/order'>OrderHistory</Link>
 
 
             &nbsp;&nbsp;
