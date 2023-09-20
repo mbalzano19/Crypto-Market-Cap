@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(0, 132, 255);
+}
+
+.bigdiv {
+    background-color: rgb(212, 241, 255);
+    /* display: flex; */
+}
+
+nav {
+    background-color: rgb(247, 0, 255);
+}
+
+table, th, td {
+    border: .5px solid;
+  }
+
+table {
+    width: 100%;
+    padding: 10px;
+}
+
+th {
+    font-size: 40px;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+
+}
+
+tr:hover {background-color: rgb(0, 132, 255)}
+
+tr:hover {color: rgb(255, 255, 255)}
