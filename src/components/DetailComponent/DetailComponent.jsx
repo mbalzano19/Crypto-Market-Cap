@@ -21,8 +21,8 @@ export default function DetailComponent() {
 
   return (
     <div>
-      <table>
-        <thead>
+
+        {/* <thead>
           <tr>
             <th>Name</th>
             <th>Price</th>
@@ -30,23 +30,27 @@ export default function DetailComponent() {
             <th>24 Hour Volume</th>
             <th>Supply</th>
           </tr>
-        </thead>
-        <tbody>
-          <tr key={example.id}>
-            <td>
-              <a href={`/detail/${example.id}`}>
-                {example.name}&nbsp;{example.symbol}
-              </a>
-            </td>
-            <td>${parseFloat(example.priceUsd).toFixed(2)}</td>
-            <td style={{ backgroundColor: getBackgroundColor(parseFloat(example.changePercent24Hr)) }}>
+        </thead> */}
+
+          {/* <tr key={example.id}> */}
+                <h1>
+                {example.name}&nbsp;({example.symbol})
+                </h1>
+                <h2>${parseFloat(example.priceUsd).toFixed(2)}</h2>
+                <h2 id='twofour' style={{ color: getBackgroundColor(parseFloat(example.changePercent24Hr)) }}>
+              {parseFloat(example.changePercent24Hr).toFixed(2)}%
+            </h2>
+
+
+            {/* <td>${parseFloat(example.priceUsd).toFixed(2)}</td> */}
+            {/* <td id='twofour' style={{ backgroundColor: getBackgroundColor(parseFloat(example.changePercent24Hr)) }}>
               {parseFloat(example.changePercent24Hr).toFixed(2)}
-            </td>
+            </td> */}
             <td>{parseFloat(example.volumeUsd24Hr).toFixed()}</td>
             <td>{parseFloat(example.supply).toFixed()}</td>
-          </tr>
-        </tbody>
-      </table>
+          {/* </tr> */}
+
+
     </div>
   );
 }

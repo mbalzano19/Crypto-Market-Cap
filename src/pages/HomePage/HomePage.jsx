@@ -34,12 +34,12 @@ export default function HomePage() {
           <tr key={data.id}>
             <td>
               <a href={`/detail/${data.id}`}>
-                {data.name}&nbsp;{data.symbol}
+                {data.name}&nbsp;({data.symbol})
               </a>
             </td>
             <td>${parseFloat(data.priceUsd).toFixed(2)}</td>
             <td style={{ color: getBackgroundColor(parseFloat(data.changePercent24Hr)) }}>
-              {parseFloat(data.changePercent24Hr).toFixed(2)}
+              {parseFloat(data.changePercent24Hr).toFixed(2)}%
             </td>
             <td>{parseFloat(data.volumeUsd24Hr).toFixed()}</td>
             <td>{parseFloat(data.supply).toFixed()}</td>
